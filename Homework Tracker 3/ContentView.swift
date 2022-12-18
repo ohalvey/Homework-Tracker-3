@@ -17,7 +17,12 @@ struct ContentView: View {
     @State private var assignment7: String = ""
     @State private var assignment8: String = ""
     @State private var assignment9: String = ""
-    @State private var isSelected: Bool = false
+    @State private var showing1 = 1.0
+    @State private var showing2 = 1.0
+    @State private var showing3 = 1.0
+    @State private var showing4 = 1.0
+    @State private var showing5 = 1.0
+    @State private var showing6 = 1.0
     var body: some View {
         VStack {
             VStack {
@@ -25,9 +30,18 @@ struct ContentView: View {
                     .padding(40)
                 TextField("Assignment 1", text: $assignment)
                     .frame(width: 110, height: 10, alignment: .center)
-                
+                    .opacity(showing1)
+                Button("x") {
+                    showing1 = 0
+                    
+                }
+                }
                 TextField("Assignment 2", text: $assignment1)
                     .frame(width: 110, height: 20, alignment: .center)
+                    .opacity(showing2)
+            Button("x") {
+                showing2 = 0
+            }
             }
             VStack {
                 Text("History")
@@ -75,4 +89,4 @@ struct ContentView: View {
             ContentView()
         }
     }
-}
+
