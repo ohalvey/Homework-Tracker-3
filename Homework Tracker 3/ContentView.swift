@@ -23,58 +23,93 @@ struct ContentView: View {
     @State private var showing4 = 1.0
     @State private var showing5 = 1.0
     @State private var showing6 = 1.0
+    @State private var showing7 = 1.0
+    @State private var showing8 = 1.0
+    @State private var showing9 = 1.0
+    @State private var Showing = [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
     var body: some View {
         VStack {
             VStack {
                 Text("Science")
-                    .padding(40)
+                    .padding(5)
                 TextField("Assignment 1", text: $assignment)
                     .frame(width: 110, height: 10, alignment: .center)
-                    .opacity(showing1)
+                    .opacity(Showing[0])
                 Button("x") {
-                    showing1 = 0
+                    Showing[0] = 0
                     
                 }
-                }
-                TextField("Assignment 2", text: $assignment1)
-                    .frame(width: 110, height: 20, alignment: .center)
-                    .opacity(showing2)
+            }
+            TextField("Assignment 2", text: $assignment1)
+                .frame(width: 110, height: 20, alignment: .center)
+                .opacity(Showing[1])
             Button("x") {
-                showing2 = 0
+                Showing[1] = 0
             }
+        }
+        VStack {
+            Text("History")
+                .padding(5)
+            TextField("Assignment 1", text: $assignment2)
+                .frame(width: 110, height: 10, alignment: .center)
+                .opacity(Showing[2])
+            Button("x") {
+                Showing[2] = 0
             }
-            VStack {
-                Text("History")
-                    .padding(40)
-                TextField("Assignment 1", text: $assignment2)
-                    .frame(width: 110, height: 10, alignment: .center)
-                TextField("Assignment 2", text: $assignment3)
-                    .frame(width: 110, height: 20, alignment: .center)
+            
+            TextField("Assignment 2", text: $assignment3)
+                .frame(width: 110, height: 20, alignment: .center)
+                .opacity(Showing[3])
+            Button("x") {
+                Showing[3] = 0
             }
-            VStack {
-                Text("Math")
-                    .padding(40)
-                TextField("Assignment 1", text: $assignment4)
-                    .frame(width: 110, height: 10, alignment: .center)
-                TextField("Assignment 2", text: $assignment5)
-                    .frame(width: 110, height: 20, alignment: .center)
-                
+        }
+        VStack {
+            Text("Math")
+                .padding(5)
+            TextField("Assignment 1", text: $assignment4)
+                .frame(width: 110, height: 10, alignment: .center)
+                .opacity(Showing[4])
+            Button("x") {
+                Showing[4] = 0
+            }
+            TextField("Assignment 2", text: $assignment5)
+                .frame(width: 110, height: 20, alignment: .center)
+                .opacity(Showing[5])
+            Button("x") {
+                Showing[5] = 0
             }
             VStack {
                 Text("English")
-                    .padding(40)
+                    .padding(5)
                 TextField("Assignment 1", text: $assignment6)
                     .frame(width: 110, height: 10, alignment: .center)
+                    .opacity(Showing[6])
+                Button("x") {
+                    Showing[6] = 0
+                }
                 TextField("Assignment 2", text: $assignment7)
                     .frame(width: 110, height: 20, alignment: .center)
+                    .opacity(Showing[7])
+                Button("x") {
+                    Showing[7] = 0
+                }
             }
             VStack {
                 Text("Language")
-                    .padding(40)
+                    .padding(5)
                 TextField("Assignment 1", text: $assignment8)
                     .frame(width: 105, height: 10, alignment: .center)
+                    .opacity(Showing[8])
+                Button("x") {
+                    Showing[8] = 0
+                }
                 TextField("Assignment 2", text: $assignment9)
                     .frame(width: 110, height: 20, alignment: .center)
+                    .opacity(Showing[9])
+                Button("x") {
+                    Showing[9] = 0
+                }
                 
                 
             }
@@ -89,4 +124,5 @@ struct ContentView: View {
             ContentView()
         }
     }
-
+    
+}
